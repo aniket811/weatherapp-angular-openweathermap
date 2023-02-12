@@ -12,7 +12,7 @@ export class BitcoinComponent implements OnInit {
   ngOnInit(): void {
     
         this.getcrypto.getCrytoNews().subscribe((data:any[])=>{
-      //  //  this.crypto.push(data as any)
+        this.crypto.push(data as any)
           console.log(this.crypto);
         
        });
