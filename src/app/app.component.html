@@ -1,29 +1,24 @@
-<div class="container">
-  <h1 class="d-flex justify-content-center align-text-center">
-
-     Weather App using Angular 14 and OpenWeatherMap API
-  </h1>
-  <form method="post" #CityWeather="ngForm" (ngSubmit)="(getWeather(City.value))" >
-   <label for="city">Enter City Name:</label>
-   <input type="text" name="city" id="city" #City="ngModel" ngModel >
-   <input type="submit" value="Get Weather" class="btn btn-primary btn-sm m-2">
-  </form>
-   <div class="container" *ngIf="isShow">
-      <div *ngFor="let data of weather">
-         <div class="card">
-            <div class="card-body">
-               <h5 class="card-title">City: {{data.name}}</h5>
-               <h6 class="card-subtitle mb-2 text-muted">Country: {{data.sys.country}}</h6>
-               <p class="card-text">Temperature: {{data.main.temp}} °C</p>
-               <p class="card-text">Humidity: {{data.main.humidity}} %</p>
-               <p class="card-text">Pressure: {{data.main.pressure}} hPa</p>
-               <p class="card-text">Wind Speed: {{data.wind.speed}} m/s</p>
-               <p class="card-text">Wind Direction: {{data.wind.deg}} °</p>
-               <p class="card-text">Weather: {{data.weather[0].description}}</p>
-            </div>
-         </div>
-      </div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+   <div class="container-fluid">
+     <a class="navbar-brand" href="#">Navbar</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         <li class="nav-item">
+           <a class="nav-link active" aria-current="page" href="#">Home</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">Check Current Weather</a>
+         </li>
+         
+         <li class="nav-item">
+           <a class="nav-link " href="#" routerLink="crypto">Crypto news</a>
+         </li>
+       </ul>
+      
+     </div>
    </div>
-   
- 
-</div>
+ </nav>
+ <router-outlet></router-outlet>

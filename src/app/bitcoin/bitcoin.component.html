@@ -1,0 +1,13 @@
+<div class="container" *ngFor="let price of crypto">
+
+    <div class="card" >
+        
+  <img class="card-img-top" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F293%2F344%2Foriginal%2Fvector-bitcoin-coin-on-transparent-background.jpg&f=1&nofb=1&ipt=0f397ab174c913f580636d29223a634bf7a941a6dc11b0122e41be5511cbf28d&ipo=images" alt="Card image cap" >
+        <div class="card-body" >
+            <h5 class="card-title">BitCoin</h5>
+            <h5 class="card-subtitle mb-2 text-muted">USD:{{price.BTC.USD}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">EUR:{{price.BTC.EUR}} </h6>
+        
+        </div>
+</div>
+</div>

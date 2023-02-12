@@ -1,0 +1,31 @@
+<div class="container">
+    <h1 align="center">Check Current Weather</h1>
+    <form method="post" #CityWeather="ngForm" (ngSubmit)="(getWeather(City.value))" class="form-group">
+     <label for="city" class="form-label">Enter City Name:</label>
+     <input type="text" name="city" id="city" #City="ngModel" ngModel class="form-control" >
+     <input type="submit" value="Get Weather" class="btn btn-primary btn-sm m-2" >
+    </form>
+     <div class="container" *ngIf="isShow">
+        <div *ngFor="let data of weather">
+           <div class="card">
+               <div class="card-header">
+                   <h4 align="center"> Weather Details</h4>
+                   </div>
+              <div class="card-body">
+                 <h5 class="card-title">City: {{data.name}}</h5>
+                 <h6 class="card-subtitle mb-2 text-muted">Country: {{data.sys.country}}</h6>
+                 <p class="card-text">Temperature: {{data.main.temp}} °C</p>
+                 <p class="card-text">Humidity: {{data.main.humidity}} %</p>
+                 <p class="card-text">Pressure: {{data.main.pressure}} hPa</p>
+                 <p class="card-text">Wind Speed: {{data.wind.speed}} m/s</p>
+                 <p class="card-text">Wind Direction: {{data.wind.deg}} °</p>
+                 <p class="card-text">Weather: {{data.weather[0].description}}</p>
+                   <p class="card-text">Clouds: {{data.clouds.all}} %</p>
+
+              </div>
+           </div>
+        </div>
+     </div>
+     
+   
+  </div>
