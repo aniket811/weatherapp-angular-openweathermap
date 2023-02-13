@@ -14,7 +14,6 @@ export class BitcoinComponent implements OnInit {
         this.getcrypto.getCrytoNews().subscribe((data:any[])=>{
         this.crypto.push(data as any)
           console.log(this.crypto);
-        
        });
   }
 }
